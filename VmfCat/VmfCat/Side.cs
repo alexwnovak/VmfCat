@@ -7,7 +7,7 @@
          get;
       }
 
-      public Plane[] Planes
+      public Plane Plane
       {
          get;
       }
