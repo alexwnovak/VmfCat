@@ -54,6 +54,7 @@
     <Compile Include="Vector3.cs" />
     <Compile Include="Vector3Extensions.cs" />
     <Compile Include="VersionInfo.cs" />
+    <Compile Include="VersionInfoExtensions.cs" />
     <Compile Include="VmfWriter.cs" />
     <Compile Include="World.cs" />
     <Compile Include="Writer.cs" />
