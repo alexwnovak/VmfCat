@@ -5,6 +5,7 @@
       public int Id
       {
          get;
+         set;
       }
 
       public Plane Plane
@@ -17,7 +18,17 @@
          get;
       }
 
+      public int Rotation
+      {
+         get;
+      }
+
       public int LightMapScale
+      {
+         get;
+      }
+
+      public int SmoothingGroups
       {
          get;
       }
@@ -27,7 +38,9 @@
          Id = 0;
          Plane = plane;
          Material = "customdev/dev_measuregeneric01red";
+         Rotation = 0;
          LightMapScale = 16;
+         SmoothingGroups = 0;
       }
    }
 }
