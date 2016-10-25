@@ -48,6 +48,7 @@
     <Compile Include="Side.cs" />
     <Compile Include="SideFactory.cs" />
     <Compile Include="Solid.cs" />
+    <Compile Include="SolidExtensions.cs" />
     <Compile Include="Vector3.cs" />
     <Compile Include="VersionInfo.cs" />
     <Compile Include="VmfWriter.cs" />
