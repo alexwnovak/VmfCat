@@ -53,6 +53,7 @@
     <Compile Include="SolidFactory.cs" />
     <Compile Include="Vector3.cs" />
     <Compile Include="Vector3Extensions.cs" />
+    <Compile Include="Vector3f.cs" />
     <Compile Include="VersionInfo.cs" />
     <Compile Include="VersionInfoExtensions.cs" />
     <Compile Include="VmfWriter.cs" />
