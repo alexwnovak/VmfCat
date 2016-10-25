@@ -16,6 +16,10 @@ namespace VmfCat
          var versionInfo = new VersionInfo();
          versionInfo.Serialize( _writer );
 
+         _writer.WriteLine( "visgroups" );
+         _writer.WriteLine( "{" );
+         _writer.WriteLine( "}" );
+
          foreach ( var solid in world.Solids )
          {
             solid.Serialize( _writer );
