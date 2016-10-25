@@ -43,6 +43,22 @@ namespace VmfCat
          _writer.WriteLine( "}" );
       }
 
+      private void WriteCordon()
+      {
+         _writer.WriteLine( "cordon" );
+         _writer.WriteLine( "{" );
+
+         _writer.Indent();
+
+         _writer.WritePairLine( "mins", "(-1024 -1024 -1024)" );
+         _writer.WritePairLine( "maxs", "(1024 1024 1024)" );
+         _writer.WritePairLine( "active", 0 );
+
+         _writer.Exdent();
+
+         _writer.WriteLine( "}" );
+      }
+
       public void Save( World world, string fileName )
       {
          var versionInfo = new VersionInfo();
@@ -77,6 +93,8 @@ namespace VmfCat
          _writer.WriteLine( "}" );
 
          WriteCameras();
+
+         WriteCordon();
       }
    }
 }
