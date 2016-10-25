@@ -29,6 +29,20 @@ namespace VmfCat
          _writer.WriteLine( "}" );
       }
 
+      private void WriteCameras()
+      {
+         _writer.WriteLine( "cameras" );
+         _writer.WriteLine( "{" );
+
+         _writer.Indent();
+
+         _writer.WritePairLine( "activecamera", -1 );
+
+         _writer.Exdent();
+
+         _writer.WriteLine( "}" );
+      }
+
       public void Save( World world, string fileName )
       {
          var versionInfo = new VersionInfo();
@@ -61,6 +75,8 @@ namespace VmfCat
          _writer.Exdent();
 
          _writer.WriteLine( "}" );
+
+         WriteCameras();
       }
    }
 }
