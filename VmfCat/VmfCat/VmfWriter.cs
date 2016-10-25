@@ -11,6 +11,24 @@ namespace VmfCat
          _writer = writer;
       }
 
+      private void WriteViewSettings()
+      {
+         _writer.WriteLine( "viewsettings" );
+         _writer.WriteLine( "{" );
+
+         _writer.Indent();
+
+         _writer.WritePairLine( "bSnapToGrid", 1 );
+         _writer.WritePairLine( "bShowGrid", 1 );
+         _writer.WritePairLine( "bShowLogicalGrid", 0 );
+         _writer.WritePairLine( "nGridSpacing", 64 );
+         _writer.WritePairLine( "bShow3DGrid", 0 );
+
+         _writer.Exdent();
+
+         _writer.WriteLine( "}" );
+      }
+
       public void Save( World world, string fileName )
       {
          var versionInfo = new VersionInfo();
@@ -19,6 +37,8 @@ namespace VmfCat
          _writer.WriteLine( "visgroups" );
          _writer.WriteLine( "{" );
          _writer.WriteLine( "}" );
+
+         WriteViewSettings();
 
          foreach ( var solid in world.Solids )
          {
