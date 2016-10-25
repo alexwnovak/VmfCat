@@ -46,6 +46,7 @@
     <Compile Include="PlaneExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Side.cs" />
+    <Compile Include="SideExtensions.cs" />
     <Compile Include="SideFactory.cs" />
     <Compile Include="Solid.cs" />
     <Compile Include="SolidExtensions.cs" />
