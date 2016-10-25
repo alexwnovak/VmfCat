@@ -40,10 +40,27 @@ namespace VmfCat
 
          WriteViewSettings();
 
+         _writer.WriteLine( "world" );
+         _writer.WriteLine( "{" );
+
+         _writer.Indent();
+
+         _writer.WritePairLine( "id", 1 );
+         _writer.WritePairLine( "mapversion", 3 );
+         _writer.WritePairLine( "classname", "worldspawn" );
+         _writer.WritePairLine( "detailmaterial", "detail/detailsprites" );
+         _writer.WritePairLine( "detailvbsp", "detail.vbsp" );
+         _writer.WritePairLine( "maxpropscreenwidth", -1 );
+         _writer.WritePairLine( "skyname", "sky_day01_01" );
+
          foreach ( var solid in world.Solids )
          {
             solid.Serialize( _writer );
          }
+
+         _writer.Exdent();
+
+         _writer.WriteLine( "}" );
       }
    }
 }
